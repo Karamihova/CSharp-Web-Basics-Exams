@@ -31,7 +31,7 @@
                     Name = r.Name,
                     Commits = r.Commits.Count(),
                     Owner = r.Owner.Username,
-                    CreatedOn = r.CreatedOn.ToString("R"),
+                    CreatedOn = r.CreatedOn.ToLocalTime().ToString("R"),
                 })
                 .ToList();
 

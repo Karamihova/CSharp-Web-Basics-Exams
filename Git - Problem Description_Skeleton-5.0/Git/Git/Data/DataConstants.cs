@@ -14,6 +14,8 @@
         public const int RepositoryMinName = 3;
         public const string RepositoryPublic = "Public";
         public const string RepositoryPrivate = "Private";
+
+        public const int DescriptionMinLength = 5;
         
     }
 }

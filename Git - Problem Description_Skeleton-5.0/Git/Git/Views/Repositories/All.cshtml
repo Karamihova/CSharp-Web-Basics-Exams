@@ -22,7 +22,10 @@
                                 <th scope="col">Owner</th>
                                 <th scope="col">Created On</th>
                                 <th scope="col">Commits Count</th>
-                                <th scope="col">Commit</th>
+                                @if(User != null)
+                                {
+                                    <th scope="col">Commit</th>
+                                }
                             </tr>
                         </thead>
                         <tbody>
@@ -33,9 +36,12 @@
                                 <td>@repository.Owner</td>
                                 <td>@repository.CreatedOn</td>
                                 <td>@repository.Commits</td>
-                                <td>
-                                    <a class="btn btn-block btn-primary text-white mb-3" href="/Commits/Create?id=@repository.Id">Commit</a>
-                                </td>
+                                @if(User != null)
+                                 {
+                                    <td>
+                                        <a class="btn btn-block btn-primary text-white mb-3" href="/Commits/Create?id=@repository.Id">Commit</a>
+                                    </td>
+                                 }
                             </tr>
                             }
                         </tbody>
